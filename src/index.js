@@ -11,7 +11,7 @@ const engine = (game) => {
     const [question, rightAnswer] = game.getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer !== rightAnswer) {
+    if (answer !== String(rightAnswer)) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
